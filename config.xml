@@ -81,8 +81,10 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
-        <variable name="APP_ID" value="152897498749205" />
-        <variable name="APP_NAME" value="namma­mangaluru" />
+    <plugin name="cordova-plugin-facebook4" spec="~1.9.1">
+        <variable name="APP_ID" value="978797555605313" />
+        <variable name="APP_NAME" value="m-Event" />
     </plugin>
+    <allow-navigation href="http://192.168.1.52:8100" />
+    <engine name="android" spec="~6.1.2" />
 </widget>

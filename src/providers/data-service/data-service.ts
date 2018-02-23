@@ -18,10 +18,10 @@ export class DataServiceProvider {
     console.log('Hello DataServiceProvider Provider');
   }
 
-  signUp(userData) {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    return this.http.post('http://localhost:1337/register', userData, headers).map(res => res.json())
-  }
+  // signUp(userData) {
+  //   let headers = new Headers({ 'Content-Type': 'application/json' });
+  //   let options = new RequestOptions({ headers: headers });
+  //   return this.http.post('http://localhost:1337/register', userData, headers).map(res => res.json())
+  // }
 
 }
