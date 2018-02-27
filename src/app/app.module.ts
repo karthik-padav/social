@@ -9,11 +9,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { DataServiceProvider } from '../providers/data-service/data-service';
+import { EventDetailsPage } from '../pages/event-details/event-details';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 @NgModule({
@@ -23,7 +25,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ContactPage,
     HomePage,
     LoginPage,
-    TabsPage
+    TabsPage,
+    EventDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     ContactPage,
     HomePage,
     LoginPage,
-    TabsPage
+    TabsPage,
+    EventDetailsPage
   ],
   providers: [
     StatusBar,

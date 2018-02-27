@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { DataServiceProvider } from '../../providers/data-service/data-service';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+
+
+import { TabsPage } from '../../pages/tabs/tabs';
 /**
  * Generated class for the LoginPage page.
  *
@@ -47,6 +50,14 @@ export class LoginPage {
 
   logout(){
     
+  }
+
+  guestLogin(){
+    console.log('guest');
+    var navOptions = {
+      animation: 'ios-transition'
+ };
+    this.navCtrl.push(TabsPage, null, navOptions);
   }
 
 }
