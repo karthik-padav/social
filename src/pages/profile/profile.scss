@@ -1,0 +1,43 @@
+.profile-w img.profile-dp {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid #ff5d3b ;
+    position: absolute;
+    padding: 0;
+    top: -40px;
+    left: 0;
+    right: 0;
+}
+.edit {
+    height: 2.5rem;
+    font-size: 1.2rem;
+}
+.profile-w {
+    position: relative;
+    margin-top: 54px;
+    overflow: visible;
+    padding-top: 65px;
+    border-radius: 5px;
+    background: -moz-linear-gradient(#ff2d66, #ff5d3b, #ff5d3b); /* FF 3.6+ */  
+    background: -ms-linear-gradient(#ff2d66, #ff5d3b, #ff5d3b); /* IE10 */  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff2d66), color-stop(100%, #ff5d3b)); /* Safari 4+, Chrome 2+ */  
+    background: -webkit-linear-gradient(#ff2d66, #ff5d3b, #ff5d3b); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient(#ff2d66, #ff5d3b, #ff5d3b); /* Opera 11.10 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2d66', endColorstr=#ff5d3b); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2d66', endColorstr=#ff5d3b)"; /* IE8+ */  
+    background: linear-gradient(to left, #ff2d66, #ff5d3b, #ff5d3b); /* the standard */  
+}
+.profile-private-info ion-item {
+    background-color: transparent;
+    color: #ffffff;
+}
+.profile-private-info ion-item p {
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.profile-private-info ion-item .label {
+    margin: 5px;
+}

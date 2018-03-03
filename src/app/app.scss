@@ -14,3 +14,68 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// Header css
+ion-header .toolbar-background,
+.bg-left-to-right {
+    background: -moz-linear-gradient(to left, #ff2d66, #ff5d3b); /* FF 3.6+ */  
+    background: -ms-linear-gradient(to left, #ff2d66, #ff5d3b); /* IE10 */  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff2d66), color-stop(100%, #ff5d3b)); /* Safari 4+, Chrome 2+ */  
+    background: -webkit-linear-gradient(to left, #ff2d66, #ff5d3b); /* Safari 5.1+, Chrome 10+ */  
+    background: -o-linear-gradient(to left, #ff2d66, #ff5d3b); /* Opera 11.10 */  
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2d66', endColorstr=#ff5d3b); /* IE6 & IE7 */  
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2d66', endColorstr=#ff5d3b)"; /* IE8+ */  
+    background: linear-gradient(to left, #ff2d66, #ff5d3b); /* the standard */  
+    z-index: 1;
+}
+ion-header .toolbar {
+    min-height: 90px;
+}
+ion-header .toolbar-content {
+    max-width: 100%;
+    z-index: 1;
+    color: #fff;
+}
+ion-header .toolbar-title {
+    color: #ffffff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.font-roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+ion-navbar button {
+    z-index: 1;
+}
+.back-button {
+    color: #ffffff !important;
+}
+hr.hr-orange {
+    background-color: #ff5d3b !important;
+}
+hr.hr-white {
+    background-color: #ffffff !important;
+}
+
+.pink-text {
+    color: #ff2d66 !important;
+}
+.orange-text {
+    color: #ff5d3b !important;
+}
+.orange-bg {
+    background-color: #ff5d3b !important;
+}
+.white-text {
+    color: #ffffff !important;
+}
+.white-bg {
+    background-color: #ffffff !important;
+}
+.tab-button:hover:not(.disable-hover),
+.tab-button[aria-selected=true],
+.tab-button[aria-selected=true] .tab-button-icon {
+    color: #ff5d3b !important;
+}
+.tab-badge {
+    background-color: #ff2d66;
+}

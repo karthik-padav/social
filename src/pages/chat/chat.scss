@@ -1,0 +1,54 @@
+page-chat {
+
+}
+.chat-window-w .message-w p {
+    overflow: visible;
+    text-overflow: initial;
+    white-space: initial;
+}
+.chat-window-w .message-w h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-window-w img.profile-dp {
+    border-radius: 50%;
+    width: 100%;
+}
+.chat-window-w .message-text {
+    border-radius: 5px;
+}
+.chat-window-w ion-label {
+    margin-bottom: 0 !important;
+}
+.chat-window-w .user-one:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #ff5d3b;
+    border-bottom: 10px solid transparent;
+}
+.chat-window-w .user-two:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ff5d3b;
+}
+.chat-footer-w .send-message {
+    font-size: 3rem;
+    height: 46px;
+    color: #ff5d3b;
+}
+.chat-footer-w .message-area {
+    background-color: transparent;
+}

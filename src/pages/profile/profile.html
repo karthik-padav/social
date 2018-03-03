@@ -1,0 +1,77 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="profile-w">
+    <img class="profile-dp" src="https://plus.google.com/_/focus/photos/public/AIbEiAIAAABDCKXQobrYveeBSiILdmNhcmRfcGhvdG8qKGNhOTg0NjM2YTYyNmQ0ZTA5YTU4Njg5OThiMzIyZGFhNmFhNjUyMDkwASEObW56eLVKepJA_FqoDwz9Uwla?sz=128">
+    <ion-card-content no-padding padding-top>
+      <!-- <button class="edit orange-bg white-text" ion-button float-right>Edit</button> -->
+      <h1 class="font-roboto white-text" text-center>Karthik</h1>
+      <ion-item-group margin-top class="profile-private-info">
+        <ion-item-divider color="light">
+          <strong>Private Information</strong>
+        </ion-item-divider>
+        <ion-item>
+          <strong>E-mail Address</strong>
+          <p class="white-text">karthikpadav@gmail.com</p>
+        </ion-item>
+        <ion-item>
+          <strong>Gender</strong>
+          <p class="white-text">Male</p>
+        </ion-item>
+        <ion-item><strong>Phone number</strong>
+          <p class="white-text">9901373620</p>
+        </ion-item>
+
+        <ion-item-divider color="light">
+          <strong>Your posts</strong>
+        </ion-item-divider>
+        <!-- <ion-item text-center>
+          <strong>You haven't posted any Event recently</strong>
+        </ion-item> -->
+        <ion-item>
+            <ion-row class="user-event-list">
+              <ion-col col-9>
+                  <p class="white-text">Marty McFly</p>
+                  <p class="white-text">November 5, 1955</p>
+              </ion-col>
+              <ion-col col-3 text-right>
+                <button (click)="editEvent()" class="edit white-bg orange-text" ion-button float-right>
+                  Edit
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <hr class="hr-white" no-margin>
+        
+          <ion-item>
+            <ion-row class="user-event-list">
+              <ion-col col-9>
+                  <p class="white-text">Marty McFly</p>
+                  <p class="white-text">November 5, 1955</p>
+              </ion-col>
+              <ion-col col-3 text-right>
+                <button (click)="editEvent()" class="edit white-bg orange-text" ion-button float-right>
+                  Edit
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+      </ion-item-group>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

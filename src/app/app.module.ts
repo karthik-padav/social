@@ -8,6 +8,10 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ProfilePage } from '../pages/profile/profile';
+import { AddEventPage } from '../pages/add-event/add-event';
+import { ChatPage } from '../pages/chat/chat';
+import { MessagesPage } from '../pages/messages/messages';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +30,11 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     HomePage,
     LoginPage,
     TabsPage,
-    EventDetailsPage
+    EventDetailsPage,
+    ProfilePage,
+    AddEventPage,
+    ChatPage,
+    MessagesPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,11 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
     HomePage,
     LoginPage,
     TabsPage,
-    EventDetailsPage
+    EventDetailsPage,
+    ProfilePage,
+    AddEventPage,
+    ChatPage,
+    MessagesPage
   ],
   providers: [
     StatusBar,

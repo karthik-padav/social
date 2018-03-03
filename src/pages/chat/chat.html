@@ -1,0 +1,75 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="chat-window-w">
+    <!-- Chat 1 -->
+      <ion-list no-margin class="message-w">
+          <ion-item no-lines no-padding>
+            <ion-row>
+                <ion-col col-2>
+                    <img class="profile-dp" src="https://plus.google.com/_/focus/photos/public/AIbEiAIAAABDCKXQobrYveeBSiILdmNhcmRfcGhvdG8qKGNhOTg0NjM2YTYyNmQ0ZTA5YTU4Njg5OThiMzIyZGFhNmFhNjUyMDkwASEObW56eLVKepJA_FqoDwz9Uwla?sz=128">
+                </ion-col>
+                <ion-col col-10 padding-left>
+                  <div padding class="message-text user-one orange-bg">
+                      <h2 class="white-text"><strong>Finn</strong></h2>
+                      <p class="white-text">I've had a pretty messed up day. If we just
+                          I've had a pretty messed up day. If we just
+                          I've had a pretty messed up day. If we just
+                          I've had a pretty messed up day. If we just...</p>
+                      </div>
+                </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+
+  <!-- Chat 2 -->
+    <ion-list no-margin class="message-w">
+        <ion-item no-lines no-padding>
+          <ion-row>
+              <ion-col col-10 padding-right>
+                <div padding class="message-text user-two orange-bg">
+                    <h2 class="white-text"><strong>Finn</strong></h2>
+                    <p class="white-text">I've had a pretty messed up day. If we just
+                        I've had a pretty messed up day. If we just
+                        I've had a pretty messed up day. If we just
+                        I've had a pretty messed up day. If we just...</p>
+                    </div>
+              </ion-col>
+              <ion-col col-2>
+                  <img class="profile-dp" src="https://plus.google.com/_/focus/photos/public/AIbEiAIAAABDCKXQobrYveeBSiILdmNhcmRfcGhvdG8qKGNhOTg0NjM2YTYyNmQ0ZTA5YTU4Njg5OThiMzIyZGFhNmFhNjUyMDkwASEObW56eLVKepJA_FqoDwz9Uwla?sz=128">
+              </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+</ion-content>
+
+<ion-footer class="chat-footer-w">
+    <ion-toolbar>
+      <ion-row class="message_row">
+        <ion-col col-9>
+          <ion-item no-lines class="message-area">
+            <ion-input type="text" placeholder="Message" [(ngModel)]="message"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3>
+            <ion-buttons end>
+          <button class="send-message" ion-button clear color="primary" (click)="sendMessage()" [disabled]="message === ''">
+              <ion-icon name="send"></ion-icon>
+        </button>
+        </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>

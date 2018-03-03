@@ -5,42 +5,62 @@
 </ion-header>
 
 <ion-content>
-  
-  <ion-card (click)="showEventDetails()">
-    <ion-item>
-      <h2>Marty McFly</h2>
-      <p>November 5, 1955</p>
-    </ion-item>
-  
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png">
-  
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content>
-  
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small (click)="likeDislike($event)">
-          <!-- <ion-icon name="thumbs-up"></ion-icon> -->
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="heart"></ion-icon>
-          <div>12 Likes</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
-      </ion-col>
-    </ion-row>
-  
-  </ion-card>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+      
+    <ion-card class="event-w">
+        <ion-card-content no-padding padding-horizontal (click)="showEventDetails()">  
+              <ion-item no-lines no-padding>
+                <h2 class="event-title font-roboto">Marty McFly</h2>
+                <p>November 5, 1955</p>
+                <ion-note item-end class="event-post-time pink-text">
+                  11h ago
+                </ion-note>
+              </ion-item>
+        
+        <div class="event-img-w">
+          <img src="https://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png">
+          <button class="timer white-text" ion-button icon-left clear small (click)="likeDislike($event)">
+            <ion-icon name="timer"></ion-icon>
+            <div>12 days</div>
+          </button>
+        </div>
+        <p padding-top>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      </ion-card-content>
+      
+        <ion-card-content no-padding padding-horizontal>
+          <ion-row>
+              <ion-col col-6>
+                  <button class="like-btn pink-text" (click)="likeDislike(liked)" ion-button icon-left clear small>
+                      <ion-icon *ngIf="!liked" name="heart-outline"></ion-icon>
+                      <ion-icon *ngIf="liked" name="heart"></ion-icon>
+                      <div>12</div>
+                    </button>
+              </ion-col>
+              <ion-col text-right>
+                  <button class="share-btn orange-text" margin-right ion-button icon-left clear small>
+                      <ion-icon name="share-alt"></ion-icon>
+                      <div>12</div>
+                    </button>
+                    <button class="comment-btn orange-text" ion-button icon-left clear small>
+                        <ion-icon name="text"></ion-icon>
+                        <div>12</div>
+                      </button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+      </ion-card>
 
-  
+      <!-- Real floating action button, fixed. It will not scroll with the content -->
+      <ion-fab bottom right edge>
+        <button class="orange-bg" ion-fab mini (click)="goToAddEvent()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-fab>
 </ion-content>

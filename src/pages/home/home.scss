@@ -1,3 +1,35 @@
 page-home {
 
 }
+.content ion-fab[bottom] {
+    bottom: 10px;
+}
+.event-w {
+    margin: 0 0 15px 0;
+    width: 100%;
+}
+.event-img-w {
+    position: relative;
+}
+.event-img-w .timer {
+    position: absolute;
+    right: 5px;
+    border-radius: 5px;
+    bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.event-post-time {
+    margin: 13px 0;
+    display: inline-block;
+}
+h2.event-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2rem;
+}
+.like-btn,
+.share-btn,
+.comment-btn {
+    font-size: 1.3em;
+    padding: 0;
+}
