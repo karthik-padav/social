@@ -4,6 +4,6 @@ page-messages {
 .message-list-w ion-note {
     font-size: 1.3rem;
 }
-.message-list-w ion-item:not(:last-child) {
-    border-bottom: 1px solid #ff5d3b !important;
+.message-list-w ion-item {
+    border-radius: 5px;
 }

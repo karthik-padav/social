@@ -38,18 +38,20 @@ export class LoginPage {
       this.userData = {
         email: profile['email'],
         name: profile['name'],
-        picture: profile['picture_large'['data']['url']],
+        first_name: profile['first_name'],
+        picture: profile['picture_large']['data']['url'],
         userName: profile['name'],
         gender: profile['gender']
       }
       console.log(this.userData);
+      console.log('guest');
+      var navOptions = {
+        animation: 'ios-transition'
+   };
+      this.navCtrl.setRoot(TabsPage, null, navOptions);
     })
   })
   .catch(e => console.log('Error logging into Facebook', e));
-  }
-
-  logout(){
-    
   }
 
   guestLogin(){

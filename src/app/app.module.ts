@@ -21,6 +21,7 @@ import { LoginPage } from '../pages/login/login';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 import { EventDetailsPage } from '../pages/event-details/event-details';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
