@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Observable';
 
 /*
   Generated class for the DataServiceProvider provider.
@@ -12,16 +13,55 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataServiceProvider {
-
-
-  constructor(public http: Http) {
+  
+  headers:any="";
+  BASE_URL:string="http://localhost:7555";
+  constructor(public http: HttpClient) {
     console.log('Hello DataServiceProvider Provider');
+    
+    this.headers = new HttpHeaders({
+      'Content-Type': 'text/json',
+      'Accept': 'text/json'
+    });
   }
 
-  // signUp(userData) {
-  //   let headers = new Headers({ 'Content-Type': 'application/json' });
-  //   let options = new RequestOptions({ headers: headers });
-  //   return this.http.post('http://localhost:1337/register', userData, headers).map(res => res.json())
+  register() {
+    let data = {
+      email:'karthikpadav'
+    }
+    return new Observable((observer) => {
+      this.http.post(this.BASE_URL + '/register', data, {
+        headers: this.headers
+      }).subscribe((res) => {
+        observer.next(res);
+        observer.complete();
+      }, (err: HttpErrorResponse) => {
+        console.log(err.message);
+      });
+    })
+  }
+
+  
+  // register() {
+  //   let headers = new HttpHeaders({
+  //     'Content-Type': 'text/json',
+  //     'Accept': 'text/json'
+  //   });
+  //   let data = {
+  //     email:'karthikpadav'
+  //   }
+  //   return new Observable((observer) => {
+  //     this.http.get('https://opentdb.com/api.php?amount=10'
+  //     // {
+  //     //   headers: headers
+  //     // }
+  //   ).subscribe((res) => {
+  //       observer.next(res);
+  //       observer.complete();
+  //     }, (err: HttpErrorResponse) => {
+  //       console.log(err.message);
+  //     });
+  //   })
   // }
 
 }

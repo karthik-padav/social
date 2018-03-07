@@ -28,6 +28,9 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    this.DataService.register().subscribe(data => {
+      console.log(data);
+    });
   }
 
   facebookLogin(){
@@ -44,7 +47,7 @@ export class LoginPage {
         gender: profile['gender']
       }
       console.log(this.userData);
-      console.log('guest');
+
       var navOptions = {
         animation: 'ios-transition'
    };
