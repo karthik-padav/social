@@ -20,17 +20,14 @@ export class DataServiceProvider {
     console.log('Hello DataServiceProvider Provider');
     
     this.headers = new HttpHeaders({
-      'Content-Type': 'text/json',
-      'Accept': 'text/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     });
   }
 
-  register() {
-    let data = {
-      email:'karthikpadav'
-    }
+  register(userData) {
     return new Observable((observer) => {
-      this.http.post(this.BASE_URL + '/register', data, {
+      console.log(userData);
+      this.http.post(this.BASE_URL + '/register', userData, {
         headers: this.headers
       }).subscribe((res) => {
         observer.next(res);

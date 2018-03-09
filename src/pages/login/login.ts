@@ -28,33 +28,57 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
-    this.DataService.register().subscribe(data => {
-      console.log(data);
-    });
   }
 
-  facebookLogin(){
-    this.facebook.login(['public_profile', 'user_friends', 'email'])
-  .then((res: FacebookLoginResponse) => {
-    console.log('Logged into Facebook!', res);
-    this.facebook.api('me?fields=id,name,gender,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
-      this.userData = {
-        email: profile['email'],
-        name: profile['name'],
-        first_name: profile['first_name'],
-        picture: profile['picture_large']['data']['url'],
-        userName: profile['name'],
-        gender: profile['gender']
-      }
-      console.log(this.userData);
+  // facebookLogin() {
+  //   this.facebook.login(['public_profile', 'user_friends', 'email'])
+  //     .then((res: FacebookLoginResponse) => {
+  //       console.log('Logged into Facebook!', res);
+  //       this.facebook.api('me?fields=id,name,gender,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
+          // this.userData = {
+          //   email: profile['email'],
+          //   name: profile['name'],
+          //   first_name: profile['first_name'],
+          //   picture: profile['picture_large']['data']['url'],
+          //   userName: profile['name'],
+          //   gender: profile['gender']
+          // }
 
-      var navOptions = {
-        animation: 'ios-transition'
-   };
-      this.navCtrl.setRoot(TabsPage, null, navOptions);
-    })
-  })
-  .catch(e => console.log('Error logging into Facebook', e));
+
+  //         this.DataService.register(this.userData).subscribe(data => {
+  //           console.log(data);
+  //         },
+  //           err => {
+
+  //           });
+
+
+  //         //     var navOptions = {
+  //         //       animation: 'ios-transition'
+  //         //  };
+  //         //     this.navCtrl.setRoot(TabsPage, null, navOptions);
+  //       })
+  //     })
+  //     .catch(e => console.log('Error logging into Facebook', e));
+  // }
+
+  // Dummy
+  facebookLogin() {
+    this.userData = {
+      email: "karthikpadav@rocketmail.com",
+      first_name: "Karthik",
+      gender: "male",
+      name: "Karthik Padav",
+      picture: "https://scontent.xx.fbcdn.net/v/t31.0-1/p720x720/23467355_1726119264099586_5319719223602729555_o.jpg?oh=383ecbf6d711f86cb1be205d2149deef&oe=5B08B82C",
+      userName: "Karthik Padav",
+    }
+    // Api call
+    this.DataService.register(this.userData).subscribe(data => {
+      console.log(data);
+    },
+      err => {
+        console.log(err);
+      });
   }
 
   guestLogin(){
