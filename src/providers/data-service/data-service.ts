@@ -14,14 +14,10 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class DataServiceProvider {
   
-  headers:any="";
+  headers:any = new HttpHeaders().set('Content-Type', 'application/json')
   BASE_URL:string="http://localhost:7555";
   constructor(public http: HttpClient) {
     console.log('Hello DataServiceProvider Provider');
-    
-    this.headers = new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded'
-    });
   }
 
   register(userData) {
